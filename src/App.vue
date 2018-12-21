@@ -1,29 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <ul class="nav" mode="horizontal">
+      <li><a href="#base">基本信息</a></li>
+      <li><a href="#des">自我描述</a></li>
+      <li><a href="#word">工作经历</a></li>
+      <li><a href="#project">项目经验</a></li>
+      <li><a href="#edu">教育经历</a></li>
+      <li><a href="#pic">图片作品</a></li>
+    </ul>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  .nav{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 50%;
+    margin-left: -600px;
+    width: 1200px;
+    height: 60px;
+    line-height: 60px;
+    background: rgba(242,242,242,0.8);
+    padding: 0 200px;
+    @include flex(space-between);
   }
-}
 </style>

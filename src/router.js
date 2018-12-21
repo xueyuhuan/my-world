@@ -5,8 +5,15 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+
+  srcollBehavior(to){
+    if(to.hash){
+      return {
+        selector:to.hash
+      }
+    }
+  },
+  // base: '/my-world/docs',
   routes: [
     {
       path: '/',
