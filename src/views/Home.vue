@@ -69,7 +69,7 @@
             <header slot="header"><i class="fa fa-picture-o fa-fw"></i>{{pic.title}}</header>
             <el-carousel :interval="5000" type="card" height="500px">
                 <el-carousel-item v-for="item in 6" :key="item">
-                    <img :src="'/images/'+item+'.png'"/>
+                    <img :src="'images/'+item+'.png'" alt="图片作品"/>
                 </el-carousel-item>
             </el-carousel>
         </el-card>
