@@ -77,42 +77,48 @@
             <header slot="header"><i class="fa fa-map fa-fw"></i>地图</header>
             <div id="map" style="height: 500px"></div>
         </el-card>
-        <el-card shadow="hover" class="code">
-            <header slot="header"><i class="fa fa-code fa-fw"></i>代码</header>
-            <el-form :model="str" ref="str" :rules="strRules" label-width="80px">
-                <el-form-item label="字符比较" prop="first">
-                    <el-input v-model="str.first" placeholder="第一个"></el-input>
-                </el-form-item>
-                <el-form-item label=" "  prop="second">
-                    <el-input v-model="str.second" placeholder="第二个"></el-input>
-                </el-form-item>
-                <el-form-item>
-                    <el-input disabled v-model="str.result" placeholder="结果"></el-input>
-                </el-form-item>
-                <el-form-item>
-                    <el-button size="medium" type="primary" @click="codeStr('str')">计算</el-button>
-                </el-form-item>
-                <el-form-item>
-                    <pre>
-                    let arr1=this.str.first.split(' ');
-                    let arr2=this.str.second.split(' ');
-                    for(let i in arr1){
-                        for(let j in arr2){
-                            if(arr1[i]===arr2[j]){
-                                this.str.result=arr1[i];
-                                return;
-                            }
-                        }
-                    }
-                    </pre>
-                </el-form-item>
-            </el-form>
-            <el-form :model="num" disabled label-width="80px">
-                <el-form-item label="整数分解">
-                    <el-input-number v-model="num.number" :min="1" :max="10000"></el-input-number>
-                    <el-input type="textarea" :autosize="{ minRows: 2}" disabled v-model="num.result" placeholder="结果"></el-input>
-                </el-form-item>
-            </el-form>
+        <!--<el-card shadow="hover" class="code">-->
+            <!--<header slot="header"><i class="fa fa-code fa-fw"></i>代码</header>-->
+            <!--<el-form :model="str" ref="str" :rules="strRules" label-width="80px">-->
+                <!--<el-form-item label="字符比较" prop="first">-->
+                    <!--<el-input v-model="str.first" placeholder="第一个"></el-input>-->
+                <!--</el-form-item>-->
+                <!--<el-form-item label=" "  prop="second">-->
+                    <!--<el-input v-model="str.second" placeholder="第二个"></el-input>-->
+                <!--</el-form-item>-->
+                <!--<el-form-item>-->
+                    <!--<el-input disabled v-model="str.result" placeholder="结果"></el-input>-->
+                <!--</el-form-item>-->
+                <!--<el-form-item>-->
+                    <!--<el-button size="medium" type="primary" @click="codeStr('str')">计算</el-button>-->
+                <!--</el-form-item>-->
+                <!--<el-form-item>-->
+                    <!--<pre>-->
+                    <!--let arr1=this.str.first.split(' ');-->
+                    <!--let arr2=this.str.second.split(' ');-->
+                    <!--for(let i in arr1){-->
+                        <!--for(let j in arr2){-->
+                            <!--if(arr1[i]===arr2[j]){-->
+                                <!--this.str.result=arr1[i];-->
+                                <!--return;-->
+                            <!--}-->
+                        <!--}-->
+                    <!--}-->
+                    <!--</pre>-->
+                <!--</el-form-item>-->
+            <!--</el-form>-->
+            <!--<el-form :model="num" disabled label-width="80px">-->
+                <!--<el-form-item label="整数分解">-->
+                    <!--<el-input-number v-model="num.number" :min="1" :max="10000"></el-input-number>-->
+                    <!--<el-input type="textarea" :autosize="{ minRows: 2}" disabled v-model="num.result" placeholder="结果"></el-input>-->
+                <!--</el-form-item>-->
+            <!--</el-form>-->
+        <!--</el-card>-->
+        <el-card shadow="hover" class="link">
+            <header slot="header">
+                <i class="fa fa-link"></i>社交主页
+            </header>
+            <a href="https://xueyuhuan.github.io/modal1/#" target="_blank">https://xueyuhuan.github.io/modal1/#</a>
         </el-card>
         <el-dialog
                 title="添加新的旅游计划"
